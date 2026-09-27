@@ -12,51 +12,38 @@
     <h2>Оставить отзыв</h2>
 
     <!-- Красивая форма отправки отзывов -->
-   <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
-</form>
+  <!-- Сама форма (структура не сломает Web3Forms) -->
+<div class="custom-feedback-wrapper">
+  <h3>Оставить отзыв</h3>
+  <p>Поделитесь своим мнением, нам это очень важно!</p>
 
-      <div class="form-group">
-        <label for="user-rating">Ваша оценка:</label>
-        <select name="rating" id="user-rating" required>
-          <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-          <option value="4">⭐⭐⭐⭐ (4)</option>
-          <option value="3">⭐⭐⭐ (3)</option>
-          <option value="2">⭐⭐ (2)</option>
-          <option value="1">⭐ (1)</option>
-        </select>
-      </div>
+  <form action="https://web3forms.com" method="POST">
+    <!-- Обязательный скрытый ключ (оставлен без изменений) -->
+    <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
 
-      <div class="form-group">
-        <label for="user-review">Ваш отзыв:</label>
-        <textarea name="message" id="user-review" placeholder="Напишите честный отзыв..." rows="5" required></textarea>
-      </div>
-
-      <button type="submit" id="submit-btn">Отправить отзыв</button>
-    </form>
-
-    <!-- Блок статуса отправки ("Ваш отзыв обрабатывается...") -->
-    <div id="form-status" class="status-message"></div>
-
-    <h2>Все отзывы</h2>
-    
-    <!-- Место для ручного добавления отзывов -->
-    <div id="reviews-container">
-      
-      <div class="review-item">
-        <div class="review-header">
-          <span class="review-name">Наталья (Пример)</span>
-          <span class="review-rating">⭐⭐⭐⭐⭐</span>
-        </div>
-        <p class="review-text">Отличный шаблон! Всё работает быстро и приходит на почту.</p>
-      </div>
-
+    <!-- Поле Имени -->
+    <div class="form-field-group">
+      <label for="user-name">Ваше имя</label>
+      <input type="text" id="user-name" name="name" class="form-field-input" placeholder="Как к вам обращаться?" required>
     </div>
-  </div>
+
+    <!-- Поле Email -->
+    <div class="form-field-group">
+      <label for="user-email">Электронная почта</label>
+      <input type="email" id="user-email" name="email" class="form-field-input" placeholder="name@example.com" required>
+    </div>
+
+    <!-- Поле Сообщения -->
+    <div class="form-field-group">
+      <label for="user-message">Ваш отзыв или сообщение</label>
+      <textarea id="user-message" name="message" class="form-field-input" placeholder="Напишите здесь всё, что думаете..." required></textarea>
+    </div>
+
+    <!-- Кнопка отправки -->
+    <button type="submit" class="form-submit-btn">Отправить сообщение</button>
+  </form>
+</div>
+      
 
   <!-- Подключение вашего скрипта -->
   <script src="script.js"></script>
