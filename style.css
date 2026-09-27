@@ -8,114 +8,93 @@ body {
   display: flex;
   justify-content: center;
 }
+  .custom-feedback-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+  }
 
-.container {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-}
+  .custom-feedback-wrapper h3 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    color: #1a1a1a;
+    font-weight: 700;
+    text-align: center;
+  }
 
-h2 {
-  color: #2c3e50;
-  border-bottom: 2px solid #ecf0f1;
-  padding-bottom: 8px;
-  margin-top: 30px;
-}
+  .custom-feedback-wrapper p {
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+  }
 
-h2:first-of-type {
-  margin-top: 0;
-}
+  .form-field-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
 
-/* Стили формы */
-.form-group {
-  margin-bottom: 15px;
-}
+  .form-field-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333333;
+    font-size: 14px;
+  }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #34495e;
-}
+  .form-field-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1a1a1a;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+  }
 
-input[type="text"], select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
+  .form-field-input::placeholder {
+    color: #a0a0a0;
+  }
 
-input[type="text"]:focus, select:focus, textarea:focus {
-  border-color: #3498db;
-  outline: none;
-}
+  /* Эффект при клике на поле */
+  .form-field-input:focus {
+    border-color: #4f46e5;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+  }
 
-/* Кнопка отправки */
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
-  transition: background 0.2s;
-}
+  textarea.form-field-input {
+    min-height: 110px;
+    resize: vertical;
+  }
 
-button:hover {
-  background-color: #2980b9;
-}
+  .form-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #4f46e5; /* Красивый индиго/фиолетовый цвет */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  }
 
-button:disabled {
-  background-color: #bdc3c7;
-  cursor: not-allowed;
-}
+  /* Эффекты для кнопки */
+  .form-submit-btn:hover {
+    background-color: #4338ca;
+  }
 
-/* Блок уведомлений */
-.status-message {
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 4px;
-  font-weight: bold;
-  display: none;
-  text-align: center;
-}
-
-/* Стили для списка отзывов */
-.review-item {
-  background-color: #fafbfc;
-  border: 1px solid #e1e8ed;
-  border-radius: 6px;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-
-.review-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.review-name {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-.review-text {
-  margin: 0;
-  color: #555;
-  line-height: 1.4;
-}
-
-.no-reviews {
-  color: #7f8c8d;
-  text-align: center;
-  font-style: italic;
-}
+  .form-submit-btn:active {
+    transform: scale(0.98);
+  }
