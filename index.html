@@ -12,9 +12,13 @@
     <h2>Оставить отзыв</h2>
 
     <!-- Форма отправки отзывов -->
-    <form id="review-form">
-      <!-- Сюда мы уже вставили ваш рабочий ключ доступа -->
-      <input type="hidden" name="access_key" value="b866de9c-4617-4f27-a4b9-9dc2a6825971">
+    <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
 
       <div class="form-group">
         <label for="user-name">Ваше имя:</label>
