@@ -1,46 +1,76 @@
-/* Стили для кнопки отправки */
-form[action*="web3forms.com"] button[type="submit"] {
+/* Общие стили для всех полей ввода */
+form[action*="web3forms.com"] input[type="text"],
+form[action*="web3forms.com"] input[type="email"],
+form[action*="web3forms.com"] textarea {
   width: 100%;
-  padding: 14px 24px;
-  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  cursor: pointer;
-  
-  /* Эффект объема и плавные переходы */
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
-  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
-  will-change: transform, box-shadow;
+  padding: 13px 16px 13px 44px; /* Отступ слева 44px под иконку */
+  margin-bottom: 20px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #0f172a;
+  background-color: #f8fafc;
+  background-repeat: no-repeat;
+  background-position: 14px center; /* Позиционирование иконки */
+  background-size: 18px 18px;
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* При наведении — легкий подъем и усиление свечения */
-form[action*="web3forms.com"] button[type="submit"]:hover {
-  background: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
-  transform: translateY(-2px);
+/* Иконка "Имя" (Пользователь) */
+form[action*="web3forms.com"] input[type="text"] {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%2394a3b8" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>');
 }
 
-/* При нажатии — физическое нажатие и приседание тени */
-form[action*="web3forms.com"] button[type="submit"]:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+/* Иконка "Email" (Конверт) */
+form[action*="web3forms.com"] input[type="email"] {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%2394a3b8" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>');
 }
 
-/* Доступность: фокус при навигации с клавиатуры */
-form[action*="web3forms.com"] button[type="submit"]:focus-visible {
+/* Иконка "Сообщение" (Чат) и настройки высоты */
+form[action*="web3forms.com"] textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.6;
+  background-position: 14px 14px; /* Иконка вверху слева */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%2394a3b8" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>');
+}
+
+/* Стилизация текста-подсказки (placeholder) */
+form[action*="web3forms.com"] input::placeholder,
+form[action*="web3forms.com"] textarea::placeholder {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* Наведение мышью на поле */
+form[action*="web3forms.com"] input[type="text"]:hover,
+form[action*="web3forms.com"] input[type="email"]:hover,
+form[action*="web3forms.com"] textarea:hover {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+/* Фокус при клике на поле (подсветка и перекрашивание иконки) */
+form[action*="web3forms.com"] input[type="text"]:focus,
+form[action*="web3forms.com"] input[type="email"]:focus,
+form[action*="web3forms.com"] textarea:focus {
+  background-color: #ffffff;
+  border-color: #4f46e5;
   outline: none;
-  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Состояние блокировки (например, во время отправки формы) */
-form[action*="web3forms.com"] button[type="submit"]:disabled {
-  background: #94a3b8;
-  box-shadow: none;
-  cursor: not-allowed;
-  transform: none;
-  opacity: 0.7;
+/* Изменение цвета иконки на активный индиго при фокусе */
+form[action*="web3forms.com"] input[type="text"]:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%234f46e5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>');
+}
+
+form[action*="web3forms.com"] input[type="email"]:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%234f46e5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>');
+}
+
+form[action*="web3forms.com"] textarea:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%234f46e5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>');
 }
