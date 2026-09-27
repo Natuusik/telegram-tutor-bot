@@ -19,13 +19,13 @@
 
   <form action="https://web3forms.com" method="POST">
     <!-- Обязательный скрытый ключ (оставлен без изменений) -->
-    <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
-
-    <!-- Поле Имени -->
-    <div class="form-field-group">
-      <label for="user-name">Ваше имя</label>
-      <input type="text" id="user-name" name="name" class="form-field-input" placeholder="Как к вам обращаться?" required>
-    </div>
+   <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit Form</button>
+</form>
 
     <!-- Поле Email -->
     <div class="form-field-group">
@@ -33,17 +33,7 @@
       <input type="email" id="user-email" name="email" class="form-field-input" placeholder="name@example.com" required>
     </div>
 
-    <!-- Поле Сообщения -->
-    <div class="form-field-group">
-      <label for="user-message">Ваш отзыв или сообщение</label>
-      <textarea id="user-message" name="message" class="form-field-input" placeholder="Напишите здесь всё, что думаете..." required></textarea>
-    </div>
-
-    <!-- Кнопка отправки -->
-    <button type="submit" class="form-submit-btn">Отправить сообщение</button>
-  </form>
-</div>
-      
+   
 
   <!-- Подключение вашего скрипта -->
   <script src="script.js"></script>
