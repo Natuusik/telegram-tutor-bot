@@ -1,1 +1,0 @@
-worker: python tutor_bot.py
