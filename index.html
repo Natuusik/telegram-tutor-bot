@@ -7,14 +7,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <form action="https://api.web3forms.com/submit" method="POST">
+  <!-- Ключ доступа обязателен -->
   <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
+
+  <!-- Поле 1: Имя -->
+  <label for="name">Ваше имя</label>
+  <input type="text" id="name" name="name" placeholder="Например: Алексей" required>
+
+  <!-- Поле 2: Email -->
+  <label for="email">Электронная почта</label>
+  <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+  <!-- Поле 3: Отзыв -->
+  <label for="message">Ваш отзыв</label>
+  <textarea id="message" name="message" placeholder="Поделитесь вашим мнением..." required></textarea>
+
+  <!-- Кнопка -->
+  <button type="submit">Отправить отзыв</button>
 </form>
- 
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
