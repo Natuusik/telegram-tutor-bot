@@ -7,35 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="container">
-    <h2>Оставить отзыв</h2>
-
-    <!-- Красивая форма отправки отзывов -->
-  <!-- Сама форма (структура не сломает Web3Forms) -->
-<div class="custom-feedback-wrapper">
-  <h3>Оставить отзыв</h3>
-  <p>Поделитесь своим мнением, нам это очень важно!</p>
-
-  <form action="https://web3forms.com" method="POST">
-    <!-- Обязательный скрытый ключ (оставлен без изменений) -->
-   <form action="https://api.web3forms.com/submit" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
   <input type="text" name="name" required>
   <input type="email" name="email" required>
   <textarea name="message" required></textarea>
   <button type="submit">Submit Form</button>
 </form>
-
-    <!-- Поле Email -->
-    <div class="form-field-group">
-      <label for="user-email">Электронная почта</label>
-      <input type="email" id="user-email" name="email" class="form-field-input" placeholder="name@example.com" required>
-    </div>
-
-   
-
-  <!-- Подключение вашего скрипта -->
-  <script src="script.js"></script>
+ 
+  <script>
 </body>
 </html>
