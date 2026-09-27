@@ -12,13 +12,9 @@
     <h2>Оставить отзыв</h2>
 
     <!-- Форма отправки отзывов -->
-    <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit</button>
-</form>
+    <form id="review-form">
+      <!-- Ваш рабочий ключ доступа Web3Forms -->
+      <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
 
       <div class="form-group">
         <label for="user-name">Ваше имя:</label>
@@ -60,9 +56,6 @@
         </div>
         <p class="review-text">Отличный шаблон! Всё работает быстро и приходит на почту.</p>
       </div>
-
-      <!-- Если отзывов пока нет, можно оставить эту строчку: -->
-      <!-- <p class="no-reviews">Здесь пока нет отзывов. Будьте первым!</p> -->
 
     </div>
   </div>
