@@ -1,0 +1,69 @@
+
+  /* Стили для самой формы-контейнера */
+  form[action*="web3forms.com"] {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+  }
+
+  /* Общие стили для всех текстовых полей и textarea */
+  form[action*="web3forms.com"] input[type="text"],
+  form[action*="web3forms.com"] input[type="email"],
+  form[action*="web3forms.com"] textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1a202c;
+    background-color: #f8fafc;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Настройки высоты специально для текстового поля сообщения */
+  form[action*="web3forms.com"] textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  /* Эффект фокуса (когда нажимают на поле) */
+  form[action*="web3forms.com"] input[type="text"]:focus,
+  form[action*="web3forms.com"] input[type="email"]:focus,
+  form[action*="web3forms.com"] textarea:focus {
+    background-color: #ffffff;
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+  }
+
+  /* Стили для кнопки отправки */
+  form[action*="web3forms.com"] button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #4f46e5; /* Стильный индиго-цвет */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  /* Эффекты при наведении и нажатии на кнопку */
+  form[action*="web3forms.com"] button[type="submit"]:hover {
+    background-color: #4338ca;
+  }
+
+  form[action*="web3forms.com"] button[type="submit"]:active {
+    transform: scale(0.98);
+  }
+
