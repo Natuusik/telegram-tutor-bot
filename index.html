@@ -11,10 +11,14 @@
   <div class="container">
     <h2>Оставить отзыв</h2>
 
-    <!-- Форма отправки отзывов -->
-    <form id="review-form">
+    <!-- КЛЮЧЕВОЙ МОМЕНТ: Добавили action и method прямой отправки прямо в форму с красивым дизайном -->
+    <form action="https://web3forms.com" method="POST" id="review-form">
+      
       <!-- Ваш рабочий ключ доступа Web3Forms -->
       <input type="hidden" name="access_key" value="25a52992-4258-4960-beb2-fb81d4c2fea8">
+
+      <!-- Страница, куда перенаправит пользователя после успешной отправки -->
+      <input type="hidden" name="redirect" value="https://web3forms.com">
 
       <div class="form-group">
         <label for="user-name">Ваше имя:</label>
@@ -40,15 +44,9 @@
       <button type="submit" id="submit-btn">Отправить отзыв</button>
     </form>
 
-    <!-- Блок, где клиент увидит статус отправки -->
-    <div id="form-status" class="status-message"></div>
-
     <h2>Все отзывы</h2>
     
-    <!-- Место, куда вы будете вручную копировать одобренные отзывы из почты -->
     <div id="reviews-container">
-      
-      <!-- Пример того, как будет выглядеть добавленный вами отзыв -->
       <div class="review-item">
         <div class="review-header">
           <span class="review-name">Наталья (Пример)</span>
@@ -56,11 +54,8 @@
         </div>
         <p class="review-text">Отличный шаблон! Всё работает быстро и приходит на почту.</p>
       </div>
-
     </div>
   </div>
 
-  <!-- Подключаем наш скрипт автоматизации -->
-  <script src="script.js"></script>
 </body>
 </html>
