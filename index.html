@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт Отзывов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Оставить отзыв</h2>
+
+    <!-- Форма отправки отзывов -->
+    <form id="review-form">
+      <!-- Сюда мы уже вставили ваш рабочий ключ доступа -->
+      <input type="hidden" name="access_key" value="b866de9c-4617-4f27-a4b9-9dc2a6825971">
+
+      <div class="form-group">
+        <label for="user-name">Ваше имя:</label>
+        <input type="text" name="name" id="user-name" placeholder="Введите ваше имя" required />
+      </div>
+
+      <div class="form-group">
+        <label for="user-rating">Ваша оценка:</label>
+        <select name="rating" id="user-rating" required>
+          <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+          <option value="4">⭐⭐⭐⭐ (4)</option>
+          <option value="3">⭐⭐⭐ (3)</option>
+          <option value="2">⭐⭐ (2)</option>
+          <option value="1">⭐ (1)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="user-review">Ваш отзыв:</label>
+        <textarea name="message" id="user-review" placeholder="Напишите честный отзыв..." rows="5" required></textarea>
+      </div>
+
+      <button type="submit" id="submit-btn">Отправить отзыв</button>
+    </form>
+
+    <!-- Блок, где клиент увидит статус отправки -->
+    <div id="form-status" class="status-message"></div>
+
+    <h2>Все отзывы</h2>
+    
+    <!-- Место, куда вы будете вручную копировать одобренные отзывы из почты -->
+    <div id="reviews-container">
+      
+      <!-- Пример того, как будет выглядеть добавленный вами отзыв -->
+      <div class="review-item">
+        <div class="review-header">
+          <span class="review-name">Наталья (Пример)</span>
+          <span class="review-rating">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p class="review-text">Отличный шаблон! Всё работает быстро и приходит на почту.</p>
+      </div>
+
+      <!-- Если отзывов пока нет, можно оставить эту строчку: -->
+      <!-- <p class="no-reviews">Здесь пока нет отзывов. Будьте первым!</p> -->
+
+    </div>
+  </div>
+
+  <!-- Подключаем наш скрипт автоматизации -->
+  <script src="script.js"></script>
+</body>
+</html>
