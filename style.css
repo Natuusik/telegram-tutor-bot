@@ -1,0 +1,121 @@
+/* Общие стили страницы */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 8px;
+  margin-top: 30px;
+}
+
+h2:first-of-type {
+  margin-top: 0;
+}
+
+/* Стили формы */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+input[type="text"], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[type="text"]:focus, select:focus, textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Кнопка отправки */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Блок уведомлений */
+.status-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  display: none;
+  text-align: center;
+}
+
+/* Стили для списка отзывов */
+.review-item {
+  background-color: #fafbfc;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.review-text {
+  margin: 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+.no-reviews {
+  color: #7f8c8d;
+  text-align: center;
+  font-style: italic;
+}
